@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sana Küçük Bir Sürpriz 💗</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:#5b2944;
+    background:linear-gradient(135deg,#fff0f6,#ffd6e8,#fff7fb);
+    overflow-x:hidden;
+  }
+  .hearts{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+  .heart{
+    position:absolute;bottom:-50px;font-size:22px;opacity:.55;
+    animation:up 9s linear infinite;
+  }
+  .heart:nth-child(1){left:8%;animation-delay:0s}
+  .heart:nth-child(2){left:25%;animation-delay:2s;font-size:30px}
+  .heart:nth-child(3){left:45%;animation-delay:4s}
+  .heart:nth-child(4){left:67%;animation-delay:1s;font-size:28px}
+  .heart:nth-child(5){left:88%;animation-delay:3s}
+  @keyframes up{to{transform:translateY(-115vh) rotate(20deg);opacity:0}}
+  section{
+    position:relative;z-index:1;min-height:100vh;
+    display:flex;align-items:center;justify-content:center;
+    padding:55px 18px;
+  }
+  .card{
+    width:min(900px,100%);
+    background:rgba(255,255,255,.78);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.9);
+    border-radius:30px;
+    padding:42px 28px;
+    box-shadow:0 20px 60px rgba(190,80,130,.18);
+    text-align:center;
+  }
+  .small{font-size:14px;letter-spacing:2px;color:#c45b87;text-transform:uppercase}
+  h1{font-size:clamp(38px,8vw,72px);margin:15px 0;color:#c83f79}
+  h2{font-size:clamp(28px,6vw,45px);color:#c83f79;margin-bottom:18px}
+  p{font-size:18px;line-height:1.8}
+  .subtitle{max-width:650px;margin:0 auto 28px}
+  .btn{
+    display:inline-block;padding:14px 25px;border-radius:999px;
+    background:linear-gradient(90deg,#e95791,#c83f79);
+    color:white;text-decoration:none;font-weight:bold;
+    box-shadow:0 8px 25px rgba(200,63,121,.25);
+    transition:.25s;cursor:pointer;border:0;font-size:16px;
+  }
+  .btn:hover{transform:translateY(-3px) scale(1.02)}
+  .emoji{font-size:55px;margin-bottom:10px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+  .box{
+    padding:22px 15px;border-radius:22px;background:#fff5f9;
+    border:1px solid #ffd1e2;
+  }
+  .box b{display:block;color:#c83f79;font-size:20px;margin:8px 0}
+  .letter{text-align:left;background:#fffafa;padding:28px;border-radius:22px;border-left:5px solid #e95791}
+  .letter p{font-size:17px;margin-bottom:15px}
+  .quote{font-size:25px;font-weight:bold;color:#bd4778;line-height:1.5;margin:25px auto;max-width:700px}
+  #secret{display:none;margin-top:22px;animation:fade .6s}
+  @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .footer{font-size:14px;margin-top:25px;color:#9c647d}
+  @media(max-width:650px){
+    .grid{grid-template-columns:1fr}
+    .card{padding:32px 18px;border-radius:24px}
+    p{font-size:16px}
+    .letter{padding:22px}
+  }
+</style>
+</head>
+<body>
+
+<div class="hearts">
+  <div class="heart">💗</div><div class="heart">💕</div>
+  <div class="heart">💖</div><div class="heart">💞</div>
+  <div class="heart">💗</div>
+</div>
+
+<section>
+  <div class="card">
+    <div class="emoji">🌸💗🌸</div>
+    <div class="small">Sana küçük bir sürpriz</div>
+    <h1>İyi ki varsın. 🫶</h1>
+    <p class="subtitle">
+      Bazen birkaç kelime, anlatmak istediğimiz her şeyi anlatmaya yetmiyor.
+      O yüzden bu kez sana küçük bir dünya hazırlamak istedim. 💕
+    </p>
+    <a class="btn" href="#mektup">Sana söylemek istediklerim ↓</a>
+  </div>
+</section>
+
+<section id="mektup">
+  <div class="card">
+    <div class="emoji">💌</div>
+    <h2>Bir özür mektubu...</h2>
+    <div class="letter">
+      <p>
+        Öncelikle seni kırdığım için gerçekten özür dilerim. Bazen yaptığım
+        şeylerin seni nasıl hissettirebileceğini düşünmeden davranabiliyorum.
+        Ama bu, seni üzmemi haklı çıkarmaz.
+      </p>
+      <p>
+        Senden istediğim şey hemen her şeyi unutman değil. Sadece bilmeni
+        isterim ki seni üzmek hiçbir zaman istediğim bir şey değildi.
+        Hatalarımı fark edip daha güzel davranmayı öğrenmek istiyorum.
+      </p>
+      <p>
+        Sen benim için sadece güzel anlar paylaştığım biri değilsin.
+        Gülüşünü, konuşmalarını, küçük şeylere verdiğin tepkileri ve
+        birlikte geçirdiğimiz güzel zamanları gerçekten önemsiyorum. 🥹💗
+      </p>
+      <p>
+        Eğer kalbini kırdıysam, onu düzeltmek için sabırla uğraşmaya hazırım.
+        Çünkü senin yüzünde bir gülümseme görmek benim için gerçekten çok
+        değerli. 🌷
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <div class="emoji">🎀</div>
+    <h2>Çünkü sen özelsin</h2>
+    <p class="quote">
+      “Hayatın içindeki en güzel şeyler bazen büyük olaylar değil,
+      yanında kendin gibi hissedebildiğin insanlardır.” 💗
+    </p>
+
+    <div class="grid">
+      <div class="box">🌸<b>Gülüşün</b><span>Ortamdaki havayı bile değiştirecek kadar güzel.</span></div>
+      <div class="box">🫶<b>Kalbin</b><span>İçindeki güzellik, dışarıdan çok daha değerli.</span></div>
+      <div class="box">✨<b>Varlığın</b><span>Bazen hiçbir şey yapmadan bile günü güzelleştiriyor.</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <div class="emoji">🥹💞</div>
+    <h2>Bir sözüm daha var...</h2>
+    <p class="subtitle">
+      Bundan sonra kusursuz olacağım diye söz veremem.
+      Ama seni kırdığımda bunu görmezden gelmek yerine anlamaya,
+      dinlemeye ve daha iyi davranmaya çalışacağıma söz verebilirim.
+    </p>
+
+    <button class="btn" onclick="showSecret()">Gizli mesaja dokun 💗</button>
+
+    <div id="secret">
+      <p class="quote">
+        “Bazen bir özür her şeyi hemen düzeltmez.
+        Ama gerçekten değer veren biri, düzeltmek için çabalamaya devam eder.” 🌷
+      </p>
+      <p>Ve evet... Bu sitenin sonunda bile seni biraz şımartmadan bırakmayacağım. 😌💕</p>
+      <br>
+      <p style="font-size:22px;font-weight:bold;color:#c83f79">İyi ki hayatımdasın. 💗</p>
+    </div>
+
+    <div class="footer">Bu küçük site, sana kocaman bir gülümseme bırakması dileğiyle. 🌸</div>
+  </div>
+</section>
+
+<script>
+function showSecret(){
+  const secret=document.getElementById("secret");
+  secret.style.display="block";
+  document.querySelector(".btn").textContent="Mesajın açıldı 💕";
+}
+</script>
+
+</body>
+</html>
