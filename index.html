@@ -1,341 +1,354 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kalbimin Adresi: Sen ❤️</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İyi ki Doğdun, Bir Tanem ❤️</title>
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: Georgia, serif;
-      background: linear-gradient(135deg, #100509, #450d20, #17070d);
-      color: #fff0f3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      overflow-x: hidden;
-    }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap');
 
-    .container {
-      width: 100%;
-      max-width: 500px;
-      text-align: center;
-      background: rgba(15, 5, 10, 0.88);
-      border: 1px solid #a52a4b;
-      border-radius: 24px;
-      padding: 28px 22px;
-      box-shadow: 0 0 35px #7e163955;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    h1 {
-      color: #ff8fa9;
-      font-size: 30px;
-      margin-top: 0;
-    }
+body {
+    background: #090608;
+    color: #fff0f3;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
 
-    h2 {
-      color: #ffc0cb;
-    }
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+      radial-gradient(ellipse at 50% 35%, #451626 0%, #1a0b13 42%, #090608 78%);
+}
 
-    p {
-      line-height: 1.7;
-      font-size: 17px;
-    }
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background-image:
+      radial-gradient(1px 1px at 20% 30%, #fff8 99%, transparent),
+      radial-gradient(2px 2px at 70% 20%, #f6b6ca88 99%, transparent),
+      radial-gradient(1px 1px at 80% 75%, #fff7 99%, transparent),
+      radial-gradient(2px 2px at 30% 80%, #fff5 99%, transparent);
+    background-size: 230px 230px;
+    animation: twinkle 5s ease-in-out infinite alternate;
+}
 
-    .heart {
-      font-size: 55px;
-      animation: beat 1s infinite;
-      display: inline-block;
-    }
+@keyframes twinkle {
+    from { opacity: .35; }
+    to { opacity: 1; }
+}
 
-    @keyframes beat {
-      50% { transform: scale(1.18); }
-    }
+section {
+    min-height: 100vh;
+    padding: 65px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-    button {
-      display: block;
-      width: 100%;
-      margin: 12px 0;
-      padding: 14px;
-      border: 1px solid #ff8fa9;
-      border-radius: 14px;
-      background: #6e1732;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.2s;
-    }
+.flower {
+    font-size: 78px;
+    filter: drop-shadow(0 0 20px #e58da9);
+    animation: sway 4s ease-in-out infinite;
+    margin-bottom: 20px;
+}
 
-    button:hover {
-      background: #a52a4b;
-      transform: scale(1.02);
-    }
+@keyframes sway {
+    0%, 100% { transform: rotate(-5deg) translateY(0); }
+    50% { transform: rotate(5deg) translateY(-10px); }
+}
 
-    .hidden {
-      display: none;
-    }
+.eyebrow {
+    color: #e5a1b6;
+    letter-spacing: 4px;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
 
-    .progress {
-      color: #ff9db5;
-      font-size: 14px;
-    }
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
 
-    #heartArea {
-      min-height: 160px;
-      border: 1px dashed #ff8fa9;
-      border-radius: 16px;
-      margin: 18px 0;
-      padding: 12px;
-      position: relative;
-      overflow: hidden;
-    }
+h1 {
+    font-size: clamp(38px, 9vw, 66px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
 
-    .collectHeart {
-      display: inline-block;
-      margin: 8px;
-      font-size: 34px;
-      cursor: pointer;
-      animation: float 1.5s infinite alternate;
-    }
+h1 span {
+    color: #e8a1b7;
+    font-style: italic;
+}
 
-    @keyframes float {
-      to { transform: translateY(-7px); }
-    }
+.subtitle {
+    color: #d7bdc6;
+    font-size: 14px;
+    line-height: 2;
+    max-width: 340px;
+}
 
-    #finalMessage {
-      font-size: 19px;
-      color: #ffd1dc;
-      line-height: 1.9;
-    }
+button {
+    margin-top: 35px;
+    background: transparent;
+    border: 1px solid #b85d7c;
+    color: #ffe5ed;
+    padding: 14px 27px;
+    border-radius: 40px;
+    font-family: inherit;
+    font-size: 13px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s;
+}
 
-    .small {
-      color: #d9a4b2;
-      font-size: 13px;
+button:hover {
+    background: #742b46;
+    box-shadow: 0 0 25px #a6426570;
+    transform: translateY(-2px);
+}
+
+.divider {
+    width: 65px;
+    height: 1px;
+    background: #b85d7c;
+    margin: 30px auto;
+}
+
+.card {
+    max-width: 520px;
+    width: 100%;
+    padding: 32px 25px;
+    background: #ffffff08;
+    border: 1px solid #e9a8bd25;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 15px 60px #0004;
+}
+
+.card p {
+    font-size: 14px;
+    color: #e0cbd2;
+    line-height: 2.1;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #edb1c4;
+    font-size: clamp(29px, 7vw, 40px);
+    margin-bottom: 20px;
+}
+
+.signature {
+    color: #e8a1b7;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-style: italic;
+    margin-top: 25px;
+}
+
+.flowers {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin: 28px 0;
+    font-size: 37px;
+}
+
+.flowers span {
+    animation: sway 3s ease-in-out infinite;
+}
+
+.flowers span:nth-child(2) { animation-delay: .5s; }
+.flowers span:nth-child(3) { animation-delay: 1s; }
+
+.hidden-message {
+    display: none;
+    margin-top: 25px;
+    animation: appear 1.2s ease;
+}
+
+.hidden-message.show {
+    display: block;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    animation: floatUp linear forwards;
+    z-index: 5;
+    color: #e58ca8;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(30deg);
+        opacity: 0;
     }
-  </style>
+}
+
+footer {
+    padding: 30px 15px;
+    text-align: center;
+    color: #9c7885;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+</style>
 </head>
+
 <body>
+<div class="background"></div>
+<div class="stars"></div>
 
-  <main class="container">
-    <section id="intro">
-      <div class="heart">❤️</div>
-      <h1>Kalbimin Adresi: Sen</h1>
-      <p>
-        Sana küçük bir oyun hazırladım, sevgilim.<br>
-        Birkaç soruyu cevapla ve kalbimin sana
-        sakladığı sürprize ulaş. 💌
-      </p>
-      <button onclick="startGame()">Sürprizi Aç ✨</button>
-      <p class="small">Bu oyunun tek doğru cevabı sensin.</p>
-    </section>
+<section>
+    <div class="flower">🌸</div>
 
-    <section id="quiz" class="hidden">
-      <p class="progress" id="progress"></p>
-      <h2 id="question"></h2>
-      <div id="answers"></div>
-      <p id="feedback"></p>
-    </section>
+    <p class="eyebrow">Bugün dünyadaki en güzel günlerden biri</p>
 
-    <section id="heartGame" class="hidden">
-      <h2>Kalbimi Topla ❤️</h2>
-      <p>
-        Kalbim uzaklarda olsa da hep senin yanında.
-        Devam etmek için aşağıdaki 5 kalbe dokun!
-      </p>
-      <div id="heartArea"></div>
-      <p id="heartCount">Toplanan kalp: 0 / 5</p>
-    </section>
+    <h1>İyi ki doğdun,<br><span>Bir Tanem.</span></h1>
 
-    <section id="ending" class="hidden">
-      <div class="heart">💖</div>
-      <h1>Sürprizin Hazır!</h1>
-      <p id="finalMessage">
-        Mesafeler aramıza girebilir ama kalbimdeki
-        yerini asla değiştiremez.
-      </p>
-      <p>
-        Bazen geç cevap verebilirim, bazen günün
-        telaşına kapılabilirim. Ama bu, seni
-        önemsemediğim anlamına gelmez.
-      </p>
-      <p>
-        Sen benim için sıradan biri değilsin.
-        Gülüşün, sesin, varlığın benim için çok değerli.
-        Seni daha çok mutlu etmek ve sana bunu
-        hissettirmek istiyorum.
-      </p>
-      <h2>Seni çok seviyorum, sevgilim. ❤️</h2>
-      <button onclick="showFinalSurprise()">Son Bir Şey Daha 💌</button>
-      <p id="lastWords" class="hidden">
-        Eğer şimdi yanında olsaydım, sana sımsıkı
-        sarılır ve kulağına şunu fısıldardım:
-        <br><br>
-        <strong>“İyi ki varsın. İyi ki benimlesin.” ❤️</strong>
-      </p>
-      <button onclick="restartGame()">Tekrar Oyna ↻</button>
-    </section>
-  </main>
+    <p class="subtitle">
+        Bugün sadece senin doğum günün değil...
+        Benim hayatımda olduğun için şükrettiğim
+        özel günlerden biri. ❤️
+    </p>
 
-  <script>
-    const questions = [
-      {
-        question: "Bence dünyanın en güzel gülüşü kimin?",
-        answers: [
-          "Senin 🥹❤️",
-          "Başka birinin",
-          "Bilmiyorum"
-        ],
-        correct: 0,
-        message: "Doğru cevap! Gülüşün dünyama iyi geliyor. 💗"
-      },
-      {
-        question: "Aramızda mesafeler olsa bile ne değişmez?",
-        answers: [
-          "İnternet hızımız 😂",
-          "Sana olan sevgim ❤️",
-          "Telefonumun şarjı 🔋"
-        ],
-        correct: 1,
-        message: "Aynen öyle! Mesafeler sevgimi azaltamaz. 💌"
-      },
-      {
-        question: "Kalbimde kimin yeri var?",
-        answers: [
-          "Senin ❤️",
-          "Komşunun kedisinin 🐈",
-          "Kimsenin"
-        ],
-        correct: 0,
-        message: "Kalbimin adresini ezbere biliyorsun! 💖"
-      }
+    <button onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">
+        Sana bir şey söylemek istiyorum ↓
+    </button>
+</section>
+
+<section id="letter">
+    <div class="card">
+        <div class="flowers">
+            <span>🌷</span>
+            <span>🌸</span>
+            <span>🌷</span>
+        </div>
+
+        <p class="eyebrow">Kalbimden sana</p>
+
+        <h2>Güzelim,</h2>
+
+        <p>
+            Hayatıma girdiğinden beri bazı şeyler
+            benim için daha anlamlı. Bazen bir mesajın,
+            bazen sesin, bazen de sadece var olduğunu
+            bilmek bile yüzümü güldürmeye yetiyor.
+        </p>
+
+        <p>
+            Sana dünyanın en güzel çiçeklerini vermek
+            isterdim. Ama hiçbir çiçeğin senin kadar
+            güzel olamayacağını biliyorum.
+        </p>
+
+        <p>
+            Yeni yaşında yüzünün hep gülmesini,
+            kalbinin hiç kırılmamasını ve hayal ettiğin
+            her güzel şeye bir gün kavuşmanı diliyorum.
+        </p>
+
+        <p>
+            Mesafeler ne kadar uzak olursa olsun,
+            bugün yanında olamasam bile kalbimden
+            sana kocaman sarılıyorum.
+        </p>
+
+        <div class="divider"></div>
+
+        <p style="color:#edb1c4">
+            İyi ki varsın, iyi ki doğdun.
+            Seni tanımış olmak benim için çok özel.
+        </p>
+
+        <div class="signature">Seni çok seven biri ❤️</div>
+
+        <button onclick="showSurprise()">
+            Küçük bir sürprizin daha var 💌
+        </button>
+
+        <div id="surprise" class="hidden-message">
+            <div style="font-size:55px;margin:20px 0">💗</div>
+
+            <h2>Bir dilek tut...</h2>
+
+            <p>
+                Gözlerini bir anlığına kapat ve
+                en güzel dileğini dile.
+            </p>
+
+            <p>
+                Benim dileğim mi?
+                <br>
+                <span style="color:#f0a8c0">
+                    Birlikte daha nice güzel anılar
+                    biriktirebilmek. 🌙
+                </span>
+            </p>
+
+            <div class="flowers">
+                <span>🌸</span>
+                <span>❤️</span>
+                <span>🌸</span>
+            </div>
+
+            <p>Doğum günün kutlu olsun, bir tanem.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    SENİN İÇİN, KALBİMDEN... ♡
+</footer>
+
+<script>
+function showSurprise() {
+    const surprise = document.getElementById('surprise');
+    surprise.classList.add('show');
+    surprise.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    for (let i = 0; i < 25; i++) {
+        setTimeout(createHeart, i * 120);
+    }
+}
+
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.textContent = ['♥', '♡', '🌸', '💗'][
+        Math.floor(Math.random() * 4)
     ];
 
-    let currentQuestion = 0;
-    let collected = 0;
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = (14 + Math.random() * 22) + 'px';
+    heart.style.animationDuration = (4 + Math.random() * 4) + 's';
 
-    function startGame() {
-      document.getElementById("intro").classList.add("hidden");
-      document.getElementById("quiz").classList.remove("hidden");
-      currentQuestion = 0;
-      showQuestion();
-    }
+    document.body.appendChild(heart);
 
-    function showQuestion() {
-      const q = questions[currentQuestion];
-
-      document.getElementById("progress").textContent =
-        "Soru " + (currentQuestion + 1) + " / " + questions.length;
-
-      document.getElementById("question").textContent = q.question;
-      document.getElementById("feedback").textContent = "";
-
-      const answers = document.getElementById("answers");
-      answers.innerHTML = "";
-
-      q.answers.forEach((answer, index) => {
-        const button = document.createElement("button");
-        button.textContent = answer;
-        button.onclick = () => chooseAnswer(index);
-        answers.appendChild(button);
-      });
-    }
-
-    function chooseAnswer(index) {
-      const q = questions[currentQuestion];
-      const feedback = document.getElementById("feedback");
-
-      if (index === q.correct) {
-        feedback.textContent = q.message;
-      } else {
-        feedback.textContent =
-          "Bir daha düşün sevgilim. İpucu: Cevap kalbinde saklı. ❤️";
-        return;
-      }
-
-      const buttons = document.querySelectorAll("#answers button");
-      buttons.forEach(button => button.disabled = true);
-
-      const nextButton = document.createElement("button");
-      nextButton.textContent =
-        currentQuestion === questions.length - 1
-          ? "Kalplere Ulaş ❤️"
-          : "Sonraki Soru ➜";
-
-      nextButton.onclick = () => {
-        currentQuestion++;
-
-        if (currentQuestion < questions.length) {
-          showQuestion();
-        } else {
-          document.getElementById("quiz").classList.add("hidden");
-          startHeartGame();
-        }
-      };
-
-      document.getElementById("answers").appendChild(nextButton);
-    }
-
-    function startHeartGame() {
-      document.getElementById("heartGame").classList.remove("hidden");
-
-      const area = document.getElementById("heartArea");
-      area.innerHTML = "";
-      collected = 0;
-      updateHeartCount();
-
-      for (let i = 0; i < 5; i++) {
-        const heart = document.createElement("span");
-        heart.className = "collectHeart";
-        heart.textContent = "❤️";
-        heart.setAttribute("role", "button");
-        heart.setAttribute("aria-label", "Kalbi topla");
-
-        heart.onclick = () => {
-          if (heart.dataset.collected) return;
-
-          heart.dataset.collected = "true";
-          heart.textContent = "💖";
-          heart.style.opacity = "0.4";
-          heart.style.cursor = "default";
-
-          collected++;
-          updateHeartCount();
-
-          if (collected === 5) {
-            setTimeout(() => {
-              document.getElementById("heartGame").classList.add("hidden");
-              document.getElementById("ending").classList.remove("hidden");
-            }, 650);
-          }
-        };
-
-        area.appendChild(heart);
-      }
-    }
-
-    function updateHeartCount() {
-      document.getElementById("heartCount").textContent =
-        "Toplanan kalp: " + collected + " / 5";
-    }
-
-    function showFinalSurprise() {
-      document.getElementById("lastWords").classList.remove("hidden");
-    }
-
-    function restartGame() {
-      document.getElementById("ending").classList.add("hidden");
-      document.getElementById("lastWords").classList.add("hidden");
-      document.getElementById("intro").classList.remove("hidden");
-      document.getElementById("quiz").classList.add("hidden");
-      document.getElementById("heartGame").classList.add("hidden");
-    }
-  </script>
+    setTimeout(() => heart.remove(), 8000);
+}
+</script>
 
 </body>
 </html>
